@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize CountUp animations
   initializeCountUp();
+
+  // Initialize Spotlight effect
+  initializeSpotlightCards();
 });
 
 // Update active navigation based on current page
@@ -276,6 +279,50 @@ function initializeCountUp() {
   // Observe all countup elements
   countUpElements.forEach((element) => {
     countUpObserver.observe(element);
+  });
+}
+
+// Spotlight Card Effect
+function initializeSpotlightCards() {
+  const spotlightCards = document.querySelectorAll(".spotlight-card");
+
+  if (spotlightCards.length === 0) return;
+
+  spotlightCards.forEach((card) => {
+    const overlay = card.querySelector(".spotlight-overlay");
+
+    if (!overlay) return;
+
+    // Track mouse movement over the card
+    card.addEventListener("mousemove", function (e) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Calculate percentage position for CSS custom properties
+      const xPercent = (x / rect.width) * 100;
+      const yPercent = (y / rect.height) * 100;
+
+      // Update CSS custom properties for spotlight position
+      overlay.style.setProperty("--mouse-x", `${xPercent}%`);
+      overlay.style.setProperty("--mouse-y", `${yPercent}%`);
+    });
+
+    // Reset spotlight position when mouse leaves
+    card.addEventListener("mouseleave", function () {
+      overlay.style.setProperty("--mouse-x", "50%");
+      overlay.style.setProperty("--mouse-y", "50%");
+    });
+
+    // Add pulse animation on hover
+    card.addEventListener("mouseenter", function () {
+      card.classList.add("spotlight-card-animate");
+    });
+
+    // Remove pulse animation class after animation completes
+    card.addEventListener("animationend", function () {
+      card.classList.remove("spotlight-card-animate");
+    });
   });
 }
 

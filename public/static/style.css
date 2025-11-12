@@ -112,60 +112,58 @@ html {
   background: #003875;
 }
 
-/* CountUp Stats Card Animations */
-.stats-card {
+/* Spotlight Card Styles with CountUp Animation */
+.spotlight-card {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
   opacity: 1;
   animation: fadeInScale 0.8s ease-out;
+  cursor: pointer;
 }
 
-.stats-card:nth-child(1) {
+.spotlight-card:nth-child(1) {
   animation-delay: 0.1s;
 }
 
-.stats-card:nth-child(2) {
+.spotlight-card:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.stats-card:nth-child(3) {
+.spotlight-card:nth-child(3) {
   animation-delay: 0.3s;
 }
 
-.stats-card:nth-child(4) {
+.spotlight-card:nth-child(4) {
   animation-delay: 0.4s;
 }
 
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* Spotlight Overlay Effect */
+.spotlight-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    circle 200px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.15),
+    transparent 80%
+  );
+  mix-blend-mode: screen;
 }
 
-.stats-card-animate {
-  animation: pulse 0.6s ease-out;
+.spotlight-card:hover .spotlight-overlay {
+  opacity: 1;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.stats-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+.spotlight-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(148, 163, 184, 0.4);
+  box-shadow: 
+    0 20px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(59, 130, 246, 0.2);
 }
 
 /* CountUp number styling */
@@ -174,6 +172,7 @@ html {
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
   transition: all 0.3s ease;
+  font-weight: 700;
 }
 
 /* Responsive utilities */
@@ -186,7 +185,7 @@ html {
     width: 100% !important;
   }
   
-  .stats-card {
+  .spotlight-card {
     padding: 1.5rem !important;
   }
   

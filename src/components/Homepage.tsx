@@ -41,92 +41,85 @@ export const Homepage = () => {
         </div>
       </section>
 
-      {/* Stats Section with CountUp Animation */}
-      <section class="py-20 bg-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-50 opacity-60"></div>
+      {/* Stats Section with CountUp Animation & Spotlight Effect */}
+      <section class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
         <div class="container mx-auto px-6 relative z-10">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-              Proven Track Record of Excellence
+          <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
+              Rekam Jejak Keunggulan yang Terbukti
             </h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-              Numbers that speak for our commitment to quality and innovation
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+              Angka-angka yang mencerminkan komitmen kami terhadap kualitas dan
+              inovasi
             </p>
           </div>
 
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             <div
-              class="stats-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-primary"
+              class="spotlight-card relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-8 transition-all duration-300"
               data-testid="stat-years"
             >
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  <i class="fas fa-calendar-check text-primary text-2xl"></i>
-                </div>
-                <div class="text-5xl font-bold text-primary mb-2">
+              <div class="spotlight-overlay"></div>
+              <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600 mb-3">
                   <span class="countup" data-target="17" data-suffix="+">
                     0
                   </span>
                 </div>
-                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide">
-                  Years Experience
+                <div class="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+                  Tahun Pengalaman
                 </div>
               </div>
             </div>
 
             <div
-              class="stats-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-secondary"
+              class="spotlight-card relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-8 transition-all duration-300"
               data-testid="stat-engineers"
             >
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
-                  <i class="fas fa-users text-secondary text-2xl"></i>
-                </div>
-                <div class="text-5xl font-bold text-secondary mb-2">
+              <div class="spotlight-overlay"></div>
+              <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-red-600 mb-3">
                   <span class="countup" data-target="30" data-suffix="+">
                     0
                   </span>
                 </div>
-                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide">
-                  Expert Engineers
+                <div class="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+                  Insinyur Ahli
                 </div>
               </div>
             </div>
 
             <div
-              class="stats-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-accent"
+              class="spotlight-card relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-8 transition-all duration-300"
               data-testid="stat-projects"
             >
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                  <i class="fas fa-project-diagram text-accent text-2xl"></i>
-                </div>
-                <div class="text-5xl font-bold text-accent mb-2">
+              <div class="spotlight-overlay"></div>
+              <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-amber-400 to-amber-600 mb-3">
                   <span class="countup" data-target="500" data-suffix="+">
                     0
                   </span>
                 </div>
-                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide">
-                  Projects Completed
+                <div class="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+                  Proyek Selesai
                 </div>
               </div>
             </div>
 
             <div
-              class="stats-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-green-600"
+              class="spotlight-card relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-8 transition-all duration-300"
               data-testid="stat-industries"
             >
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                  <i class="fas fa-industry text-green-600 text-2xl"></i>
-                </div>
-                <div class="text-5xl font-bold text-green-600 mb-2">
+              <div class="spotlight-overlay"></div>
+              <div class="relative z-10 flex flex-col items-center text-center">
+                <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-green-600 mb-3">
                   <span class="countup" data-target="8" data-suffix="+">
                     0
                   </span>
                 </div>
-                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide">
-                  Industries Served
+                <div class="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+                  Industri yang Dilayani
                 </div>
               </div>
             </div>
