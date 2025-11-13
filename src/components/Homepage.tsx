@@ -1,45 +1,10 @@
+import { HeroParallax } from "./HeroParallax";
+
 export const Homepage = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <section class="bg-gradient-to-br from-primary to-rockwell-blue text-white py-20">
-        <div class="container mx-auto px-6">
-          <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-              <i class="fas fa-award text-accent mr-2"></i>
-              <span class="text-sm font-medium">
-                Silver System Integrator Partner
-              </span>
-            </div>
-            <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Your Partner in
-              <span class="text-accent block">Automation</span>
-              Engineering
-            </h1>
-            <p class="text-xl mb-8 text-blue-100 leading-relaxed">
-              Official Silver System Integrator for Rockwell Automation.
-              Delivering cutting-edge control systems, PLC programming, and
-              industrial automation solutions since 2007.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                class="bg-secondary hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-              >
-                <i class="fas fa-phone mr-2"></i>
-                Get Free Consultation
-              </a>
-              <a
-                href="/about"
-                class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold transition-all inline-flex items-center justify-center"
-              >
-                <i class="fas fa-info-circle mr-2"></i>
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Parallax Section */}
+      <HeroParallax />
 
       {/* Stats Section with CountUp Animation & Spotlight Effect */}
       <section class="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
