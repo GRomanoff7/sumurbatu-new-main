@@ -34,6 +34,22 @@ export const Layout = ({ children }: { children: any }) => {
           `,
           }}
         ></script>
+        <style>
+          {`
+            .nav-btn {
+              padding: 0.5rem 1rem;
+              border-radius: 0.375rem;
+              transition: all 0.3s ease;
+              color: #1f2937;
+              font-weight: 500;
+            }
+            
+            .nav-btn:hover {
+              background-color: #004C97;
+              color: #ffffff;
+            }
+          `}
+        </style>
       </head>
       <body class="bg-gray-50 font-sans">
         <header class="bg-white shadow-lg sticky top-0 z-50">
@@ -72,25 +88,6 @@ export const Layout = ({ children }: { children: any }) => {
                     <a href="/contact" class="nav-btn">
                       Contact Us
                     </a>
-                    <svg
-                      class="nav-outline"
-                      overflow="visible"
-                      width="700"
-                      height="60"
-                      viewBox="0 0 700 60"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        class="nav-rect"
-                        pathLength="100"
-                        x="0"
-                        y="0"
-                        width="700"
-                        height="60"
-                        fill="transparent"
-                        stroke-width="2"
-                      ></rect>
-                    </svg>
                   </div>
                 </div>
               </div>
