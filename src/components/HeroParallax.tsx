@@ -83,7 +83,16 @@ export const HeroParallax = () => {
   const thirdRow = products.slice(10, 15);
 
   return (
-    <div class="hero-parallax-container min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+    <div class="hero-parallax-container min-h-screen relative overflow-hidden">
+      {/* Background Image with Blur Effect */}
+      <div 
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');"
+      >
+        {/* Overlay with gradient and blur effect */}
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/80 to-slate-950/85 backdrop-blur-md"></div>
+      </div>
+
       <style>{`
         .hero-parallax-container {
           perspective: 1000px;
@@ -248,8 +257,8 @@ export const HeroParallax = () => {
         </div>
       </div>
 
-      {/* Background Gradient Overlay */}
-      <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950 pointer-events-none"></div>
+      {/* Additional Gradient Overlay for depth */}
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950 pointer-events-none z-0"></div>
     </div>
   );
 };
