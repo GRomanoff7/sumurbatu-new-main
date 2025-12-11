@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize Spotlight effect
   initializeSpotlightCards();
+
+  // Update active dot indicator
+  updateActiveDotIndicator();
 });
 
 // Update active navigation based on current page
@@ -325,6 +328,7 @@ function initializeSpotlightCards() {
     });
   });
 }
+
 
 // Export for testing purposes
 if (typeof module !== "undefined" && module.exports) {

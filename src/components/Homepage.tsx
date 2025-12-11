@@ -1,10 +1,34 @@
 export const Homepage = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <section class="bg-gradient-to-br from-primary to-rockwell-blue text-white py-20">
-        <div class="container mx-auto px-6">
-          <div class="max-w-4xl mx-auto text-center">
+      {/* Hero Section with Auto-Sliding Background */}
+      <section class="hero-section relative overflow-hidden text-white py-20 lg:py-32">
+        {/* Sliding Background Images */}
+        <div class="hero-slider">
+          <div
+            class="hero-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjU0NTkxMjV8MA&ixlib=rb-4.1.0&q=85');"
+          ></div>
+          <div
+            class="hero-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1717386255773-a456c611dc4e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwYXV0b21hdGlvbnxlbnwwfHx8fDE3NjU0NTkxMjV8MA&ixlib=rb-4.1.0&q=85');"
+          ></div>
+          <div
+            class="hero-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1716643863806-989dd76ae093?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxmYWN0b3J5fGVufDB8fHx8MTc2NTQ1OTEzNXww&ixlib=rb-4.1.0&q=85');"
+          ></div>
+          <div
+            class="hero-slide"
+            style="background-image: url('https://images.pexels.com/photos/257636/pexels-photo-257636.jpeg');"
+          ></div>
+        </div>
+
+        {/* Gradient Overlay for text readability */}
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-10"></div>
+
+        {/* Content positioned on LEFT */}
+        <div class="container mx-auto px-6 relative z-20">
+          <div class="max-w-2xl">
             <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
               <i class="fas fa-award text-accent mr-2"></i>
               <span class="text-sm font-medium">
@@ -21,7 +45,7 @@ export const Homepage = () => {
               Delivering cutting-edge control systems, PLC programming, and
               industrial automation solutions since 2007.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="/contact"
                 class="bg-secondary hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
